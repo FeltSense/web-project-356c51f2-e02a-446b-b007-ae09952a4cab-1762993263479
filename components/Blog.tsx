@@ -23,7 +23,7 @@ export default function Blog() {
               <Link href={`/blog/${post.slug}`} className="block">
                 <div className="relative overflow-hidden rounded-lg mb-4 aspect-video">
                   <Image
-                    src={post.image}
+                    src={post.coverImage}
                     alt={post.title}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -32,8 +32,8 @@ export default function Blog() {
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center gap-4 text-sm text-gray-500">
-                    <span>{post.date}</span>
-                    <span>{post.readTime}</span>
+                    <span>{new Date(post.publishedAt).toLocaleDateString()}</span>
+                    <span>{post.readingTime} min read</span>
                   </div>
                   <h3 className="text-xl font-bold text-black group-hover:text-red-600 transition-colors duration-300">
                     {post.title}

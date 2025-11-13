@@ -36,7 +36,7 @@ export default function BlogPage() {
               <Link href={`/blog/${post.slug}`}>
                 <div className="relative aspect-video overflow-hidden">
                   <Image
-                    src={post.image}
+                    src={post.coverImage}
                     alt={post.title}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -48,7 +48,7 @@ export default function BlogPage() {
                     <span className="bg-red-100 text-red-600 px-2 py-1 rounded-full text-xs font-semibold">
                       {post.category}
                     </span>
-                    <span>{post.date}</span>
+                    <span>{new Date(post.publishedAt).toLocaleDateString()}</span>
                   </div>
                   <h2 className="text-xl font-bold text-black mb-3 group-hover:text-red-600 transition-colors duration-300">
                     {post.title}
@@ -58,10 +58,10 @@ export default function BlogPage() {
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
                         <span className="text-white text-sm font-bold">
-                          {post.author.charAt(0)}
+                          {post.author.name.charAt(0)}
                         </span>
                       </div>
-                      <span className="text-sm text-gray-700 font-medium">{post.author}</span>
+                      <span className="text-sm text-gray-700 font-medium">{post.author.name}</span>
                     </div>
                     <div className="flex items-center text-red-600 font-semibold group-hover:text-red-700 transition-colors duration-300">
                       Read More

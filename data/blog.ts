@@ -93,7 +93,7 @@ export default function HomePage() {
 Next.js 14 represents a significant leap forward in web development, offering improved performance, better developer experience, and more powerful features for building modern applications.`,
     author: {
       name: 'Sarah Johnson',
-      avatar: '/images/authors/sarah-johnson.jpg',
+      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
       bio: 'Senior Frontend Developer with 8+ years of experience in React and Next.js development.'
     },
     publishedAt: '2024-01-15T10:00:00Z',
@@ -102,7 +102,7 @@ Next.js 14 represents a significant leap forward in web development, offering im
     category: 'Development',
     readingTime: 8,
     featured: true,
-    coverImage: '/images/blog/nextjs-14-guide.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     seoTitle: 'Complete Next.js 14 Guide - Modern Web Development',
     seoDescription: 'Master Next.js 14 with our comprehensive guide covering app directory, server components, and best practices for modern web development.'
   },
@@ -293,7 +293,7 @@ test('displays user information correctly', () => {
 TypeScript transforms React development by providing type safety, better tooling, and improved maintainability. By following these patterns and best practices, you can build robust, scalable applications that are easier to maintain and extend over time.`,
     author: {
       name: 'Michael Chen',
-      avatar: '/images/authors/michael-chen.jpg',
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
       bio: 'Full Stack Developer and TypeScript enthusiast with experience in building large-scale applications.'
     },
     publishedAt: '2024-01-10T09:00:00Z',
@@ -302,7 +302,7 @@ TypeScript transforms React development by providing type safety, better tooling
     category: 'Development',
     readingTime: 12,
     featured: true,
-    coverImage: '/images/blog/react-typescript-scale.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     seoTitle: 'Scalable React Apps with TypeScript - Complete Guide',
     seoDescription: 'Learn to build maintainable, type-safe React applications with TypeScript. Best practices, patterns, and architecture for large-scale projects.'
   },
@@ -555,7 +555,7 @@ Modern CSS provides incredible power and flexibility for creating responsive, ma
 The key is understanding when to use each technique and how they work together to create cohesive, responsive designs that provide excellent user experiences across all devices.`,
     author: {
       name: 'Emily Rodriguez',
-      avatar: '/images/authors/emily-rodriguez.jpg',
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
       bio: 'CSS specialist and UI/UX designer passionate about modern web standards and responsive design.'
     },
     publishedAt: '2024-01-05T14:00:00Z',
@@ -564,7 +564,7 @@ The key is understanding when to use each technique and how they work together t
     category: 'Design',
     readingTime: 10,
     featured: false,
-    coverImage: '/images/blog/modern-css-techniques.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     seoTitle: 'Modern CSS Techniques - Grid, Flexbox & Container Queries',
     seoDescription: 'Master modern CSS with Grid, Flexbox, and Container Queries. Learn responsive design techniques for creating maintainable, flexible layouts.'
   }

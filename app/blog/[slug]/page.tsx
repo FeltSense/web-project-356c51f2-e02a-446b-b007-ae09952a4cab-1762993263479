@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps) {
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      images: [post.image],
+      images: [post.coverImage],
     },
   };
 }
@@ -61,7 +61,7 @@ export default function BlogArticle({ params }: PageProps) {
       {/* Article Header */}
       <div className="relative h-96 overflow-hidden">
         <Image
-          src={post.image}
+          src={post.coverImage}
           alt={post.title}
           fill
           className="object-cover"
@@ -75,9 +75,9 @@ export default function BlogArticle({ params }: PageProps) {
                 <span className="bg-red-600 px-3 py-1 rounded-full text-sm font-semibold">
                   {post.category}
                 </span>
-                <span className="text-gray-200">{post.date}</span>
+                <span className="text-gray-200">{new Date(post.publishedAt).toLocaleDateString()}</span>
                 <span className="text-gray-200">•</span>
-                <span className="text-gray-200">{post.readTime}</span>
+                <span className="text-gray-200">{post.readingTime} min read</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
               <p className="text-xl text-gray-200 max-w-3xl">{post.excerpt}</p>
@@ -91,12 +91,12 @@ export default function BlogArticle({ params }: PageProps) {
         <div className="flex items-center gap-4 mb-8 pb-8 border-b">
           <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
             <span className="text-white text-lg font-bold">
-              {post.author.charAt(0)}
+              {post.author.name.charAt(0)}
             </span>
           </div>
           <div>
-            <p className="font-semibold text-black">{post.author}</p>
-            <p className="text-gray-600 text-sm">Fitness Expert</p>
+            <p className="font-semibold text-black">{post.author.name}</p>
+            <p className="text-gray-600 text-sm">{post.author.bio}</p>
           </div>
         </div>
 
@@ -169,7 +169,7 @@ export default function BlogArticle({ params }: PageProps) {
                   <Link href={`/blog/${relatedPost.slug}`}>
                     <div className="relative aspect-video overflow-hidden rounded-lg mb-4">
                       <Image
-                        src={relatedPost.image}
+                        src={relatedPost.coverImage}
                         alt={relatedPost.title}
                         fill
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -181,7 +181,7 @@ export default function BlogArticle({ params }: PageProps) {
                         <span className="bg-red-100 text-red-600 px-2 py-1 rounded-full text-xs font-semibold">
                           {relatedPost.category}
                         </span>
-                        <span>{relatedPost.date}</span>
+                        <span>{new Date(relatedPost.publishedAt).toLocaleDateString()}</span>
                       </div>
                       <h4 className="text-xl font-bold text-black group-hover:text-red-600 transition-colors duration-300">
                         {relatedPost.title}
