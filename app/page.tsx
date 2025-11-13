@@ -6,6 +6,7 @@ import Testimonials from '@/components/Testimonials';
 import Pricing from '@/components/Pricing';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import Blog from '@/components/Blog';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Testimonials />
+      <Blog />
       <Pricing />
       <ContactForm />
       
